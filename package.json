@@ -1,0 +1,16 @@
+{
+  "name": "@mavthedev/lc874",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon --config nodemon.json",
+    "build": "tsc & peggy -c peggy.config.cjs && grammkit -t md robot.peggy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.3"
+  }
+}

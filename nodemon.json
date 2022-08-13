@@ -1,0 +1,8 @@
+{
+    "ext": "cjs,json,peggy",
+    "env": {
+        "ENV": "nodemon"
+    },
+    "restartable": "compile",
+    "exec": "peggy -c peggy.config.cjs"
+}
