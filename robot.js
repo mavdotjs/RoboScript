@@ -398,13 +398,15 @@ function peg$parse(input, options) {
     s1 = peg$parseGrid();
     if (s1 !== peg$FAILED) {
       s2 = peg$parseHeaders();
-      if (s2 === peg$FAILED) {
-        s2 = null;
-      }
-      s3 = peg$parseCommands();
-      if (s3 !== peg$FAILED) {
-        peg$savedPos = s0;
-        s0 = peg$f0(s1, s2, s3);
+      if (s2 !== peg$FAILED) {
+        s3 = peg$parseCommands();
+        if (s3 !== peg$FAILED) {
+          peg$savedPos = s0;
+          s0 = peg$f0(s1, s2, s3);
+        } else {
+          peg$currPos = s0;
+          s0 = peg$FAILED;
+        }
       } else {
         peg$currPos = s0;
         s0 = peg$FAILED;

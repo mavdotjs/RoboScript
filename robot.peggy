@@ -9,7 +9,7 @@
     }
 }
 
-Program = Grid:Grid Head:Headers? Cmds:Commands { return [ Grid, Cmds, Head || {} ] }
+Program = Grid:Grid Head:Headers Cmds:Commands { return [ Grid, Cmds, Head || {} ] }
 Grid "Grid header" = "@grid" "(" v:integer ")" semicolon n__ { return v }
 Headers = fin:Finish obs:Obstacles? { return {
     finishLine: fin,
