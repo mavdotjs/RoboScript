@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="railroad-diagram" width="529" height="62" viewBox="0 0 529 62">
+<defs><style type="text/css"><![CDATA[ svg.railroad-diagram {
+  background-color: hsl(30,20%,95%);
+}
+svg.railroad-diagram path {
+  stroke-width: 3;
+  stroke: black;
+  fill: none;
+}
+svg.railroad-diagram text {
+  font: bold 14px monospace;
+  text-anchor: middle;
+  cursor: pointer;
+}
+svg.railroad-diagram text.label {
+  text-anchor: start;
+}
+svg.railroad-diagram text.comment {
+  font: italic 12px monospace;
+}
+svg.railroad-diagram rect {
+  stroke-width: 3;
+  stroke: black;
+  fill: hsl(120,100%,90%);
+}
+ ]]></style></defs>
+<g transform="translate(.5 .5)">
+<path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
+<g>
+<path d="M40 31h0"></path>
+<path d="M488 31h0"></path>
+<path d="M40 31h10"></path>
+<g>
+<path d="M50 31h0"></path>
+<path d="M110 31h0"></path>
+<rect x="50" y="20" width="60" height="22" rx="10" ry="10"></rect>
+<text x="80" y="35">@grid</text>
+</g>
+<path d="M110 31h10"></path>
+<path d="M120 31h10"></path>
+<g>
+<path d="M130 31h0"></path>
+<path d="M158 31h0"></path>
+<rect x="130" y="20" width="28" height="22" rx="10" ry="10"></rect>
+<text x="144" y="35">(</text>
+</g>
+<path d="M158 31h10"></path>
+<path d="M168 31h10"></path>
+<g>
+<path d="M178 31h0"></path>
+<path d="M254 31h0"></path>
+<rect x="178" y="20" width="76" height="22"></rect>
+<text x="216" y="35">integer</text>
+</g>
+<path d="M254 31h10"></path>
+<path d="M264 31h10"></path>
+<g>
+<path d="M274 31h0"></path>
+<path d="M302 31h0"></path>
+<rect x="274" y="20" width="28" height="22" rx="10" ry="10"></rect>
+<text x="288" y="35">)</text>
+</g>
+<path d="M302 31h10"></path>
+<path d="M312 31h10"></path>
+<g>
+<path d="M322 31h0"></path>
+<path d="M414 31h0"></path>
+<rect x="322" y="20" width="92" height="22"></rect>
+<text x="368" y="35">semicolon</text>
+</g>
+<path d="M414 31h10"></path>
+<path d="M424 31h10"></path>
+<g>
+<path d="M434 31h0"></path>
+<path d="M478 31h0"></path>
+<rect x="434" y="20" width="44" height="22"></rect>
+<text x="456" y="35">n&#95;&#95;</text>
+</g>
+<path d="M478 31h10"></path>
+</g>
+<path d="M 488 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>
