@@ -8,7 +8,14 @@
 
 ![Program](./robot/Program.svg)
 
-References: [Headers](#Headers), [Commands](#Commands)
+References: [Grid](#Grid), [Headers](#Headers), [Commands](#Commands)
+
+### Grid
+
+![Grid](./robot/Grid.svg)
+
+Used by: [Program](#Program)
+References: [integer](#integer), [semicolon](#semicolon), [n__](#n__)
 
 ### Headers
 
@@ -22,7 +29,7 @@ References: [Finish](#Finish), [Obstacles](#Obstacles)
 ![Finish](./robot/Finish.svg)
 
 Used by: [Headers](#Headers)
-References: [coord](#coord), [n__](#n__)
+References: [coord](#coord), [semicolon](#semicolon), [n__](#n__)
 
 ### Obstacles
 
@@ -36,7 +43,7 @@ References: [Obstacle](#Obstacle)
 ![Obstacle](./robot/Obstacle.svg)
 
 Used by: [Obstacles](#Obstacles)
-References: [coord](#coord), [n__](#n__)
+References: [coord](#coord), [semicolon](#semicolon), [n__](#n__)
 
 ### Commands
 
@@ -50,7 +57,7 @@ References: [line](#line)
 ![line](./robot/line.svg)
 
 Used by: [Commands](#Commands)
-References: [Command](#Command), [n__](#n__)
+References: [Command](#Command), [dot](#dot), [n__](#n__)
 
 ### Command
 
@@ -83,7 +90,26 @@ Used by: [turn](#turn)
 
 ![integer](./robot/integer.svg)
 
-Used by: [go](#go), [coord](#coord)
+Used by: [Grid](#Grid), [go](#go), [coord](#coord)
+References: [negate](#negate)
+
+### negate
+
+![negate](./robot/negate.svg)
+
+Used by: [integer](#integer)
+
+### semicolon
+
+![semicolon](./robot/semicolon.svg)
+
+Used by: [Grid](#Grid), [Finish](#Finish), [Obstacle](#Obstacle)
+
+### dot
+
+![dot](./robot/dot.svg)
+
+Used by: [line](#line)
 
 ### coord
 
@@ -96,7 +122,7 @@ References: [__](#__), [integer](#integer)
 
 ![n__](./robot/n__.svg)
 
-Used by: [Finish](#Finish), [Obstacle](#Obstacle), [line](#line)
+Used by: [Grid](#Grid), [Finish](#Finish), [Obstacle](#Obstacle), [line](#line)
 References: [n_](#n_)
 
 ### n_

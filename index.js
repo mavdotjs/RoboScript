@@ -1,5 +1,8 @@
 // @ts-ignore
 import { parse as pegParse } from './robot.js';
+function isOutside(a, b) {
+    return a > b || a < -b;
+}
 function getVel(dir) {
     const map = {
         north: [0, 1],
@@ -34,8 +37,8 @@ function range(size, startAt = 0) {
 function mod(a, b) {
     return ((a % b) + b) % b;
 }
-function arrayEquality($1, $2) {
-    return JSON.stringify($1) === JSON.stringify($2);
+function arrayEquality(a, b) {
+    return JSON.stringify(a) === JSON.stringify(b);
 }
 /**
  * @param {CommandList} commands
@@ -43,17 +46,17 @@ function arrayEquality($1, $2) {
  * @param {boolean} verbose
  * @returns {Generator<RobotOut>}
  */
-function* interpret(commands, options, verbose = true) {
-    let direction = 0; // north
+function* interpret(gridSize, commands, options, verbose = true) {
+    let direction = 0; // North by default
     let pos = [0, 0];
-    let vel = [0, 1];
+    let vel = [0, 1]; // Should match the direction variable
     let lastStep = "";
     const { finishLine, obstacles } = options;
     if (obstacles.some(r => arrayEquality(pos, r))) {
         throw new Error("CommandError: Obstacle cannot be (0, 0)");
     }
     else if (arrayEquality(pos, finishLine)) {
-        throw new Error("CommandError: Finish line (#fn(point))");
+        throw new Error("CommandError: Finish line cannot be origin");
     }
     cmdLoop: for (let cmd of commands) {
         if (Math.sign(cmd) < 0) {
@@ -82,15 +85,15 @@ function* interpret(commands, options, verbose = true) {
                 pos[0] += vel[0];
                 pos[1] += vel[1];
                 lastStep += `\n\tmove 1. (out of ${cmd})`;
-                if (obstacles.some(r => arrayEquality(pos, r))) {
+                if (obstacles.some(r => arrayEquality(pos, r)) || isOutside(pos[0], gridSize) || isOutside(pos[1], gridSize)) {
                     pos[0] -= vel[0];
                     pos[1] -= vel[1];
-                    lastStep += "\n\tRobot hit wall. skipping step.";
+                    lastStep += "\n\tRobot hit wall. skipping.";
                     break;
                 }
                 else if (arrayEquality(pos, finishLine)) {
                     lastStep += "\nRobot hit finish line!";
-                    yield [pos, direction, arrayEquality(pos, finishLine), verbose ? lastStep : ''];
+                    yield [pos, direction, true, verbose ? lastStep : ''];
                     break cmdLoop;
                 }
             }

@@ -1,0 +1,49 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Leetcode 874 Robot Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#headers",
+			"begin": "\\b#\\b",
+			"end": "\\b\\(\\d(\\s)*,(\\s)*\\d\\);\\b"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.turn.874Bot",
+					"match": "\\bturn\\b"
+				},
+				{
+					"name": "keyword.forward.874Bot",
+					"match": "\\bforward\\b"
+				},
+				{
+					"name": "keyword.operator.right",
+					"match": "\\bright\\b"
+				},
+				{
+					"name": "keyword.operator.left",
+					"match": "\\bleft\\b"
+				}
+			]
+		},
+		"headers": {
+			"patterns": [
+				{
+					"name": "constant",
+					"match": "\\bfn\\b"
+				},
+				{
+					"name": "constant",
+					"match": "\\bob\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.robot"
+}

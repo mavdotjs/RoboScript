@@ -1,0 +1,25 @@
+{
+  "name": "874botlang",
+  "displayName": "874botLang",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "874Bot",
+      "aliases": ["Leetcode 874 Robot Language", "874Bot"],
+      "extensions": [".rbt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "874Bot",
+      "scopeName": "source.robot",
+      "path": "./syntaxes/874Bot.tmLanguage.json"
+    }]
+  }
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="railroad-diagram" width="301" height="72" viewBox="0 0 301 72">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="railroad-diagram" width="373" height="72" viewBox="0 0 373 72">
 <defs><style type="text/css"><![CDATA[ svg.railroad-diagram {
   background-color: hsl(30,20%,95%);
 }
@@ -31,33 +31,41 @@ svg.railroad-diagram rect {
 <path d="M 20 31 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
 <g>
 <path d="M40 41h0"></path>
-<path d="M260 41h0"></path>
+<path d="M332 41h0"></path>
+<path d="M40 41h10"></path>
 <g>
-<path d="M40 41h0"></path>
-<path d="M156 41h0"></path>
-<path d="M40 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<path d="M50 41h0"></path>
+<path d="M102 41h0"></path>
+<rect x="50" y="30" width="52" height="22"></rect>
+<text x="76" y="45">Grid</text>
+</g>
+<path d="M102 41h10"></path>
 <g>
-<path d="M60 21h76"></path>
-</g>
-<path d="M136 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
-<path d="M40 41h20"></path>
+<path d="M112 41h0"></path>
+<path d="M228 41h0"></path>
+<path d="M112 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
 <g>
-<path d="M60 41h0"></path>
-<path d="M136 41h0"></path>
-<rect x="60" y="30" width="76" height="22"></rect>
-<text x="98" y="45">Headers</text>
+<path d="M132 21h76"></path>
 </g>
-<path d="M136 41h20"></path>
-</g>
-<path d="M156 41h10"></path>
+<path d="M208 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M112 41h20"></path>
 <g>
-<path d="M166 41h0"></path>
-<path d="M250 41h0"></path>
-<rect x="166" y="30" width="84" height="22"></rect>
-<text x="208" y="45">Commands</text>
+<path d="M132 41h0"></path>
+<path d="M208 41h0"></path>
+<rect x="132" y="30" width="76" height="22"></rect>
+<text x="170" y="45">Headers</text>
 </g>
-<path d="M250 41h10"></path>
+<path d="M208 41h20"></path>
 </g>
-<path d="M 260 41 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+<path d="M228 41h10"></path>
+<g>
+<path d="M238 41h0"></path>
+<path d="M322 41h0"></path>
+<rect x="238" y="30" width="84" height="22"></rect>
+<text x="280" y="45">Commands</text>
+</g>
+<path d="M322 41h10"></path>
+</g>
+<path d="M 332 41 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
 </g>
 </svg>

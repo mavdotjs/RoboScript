@@ -1,14 +1,10 @@
 import { parse, interpret } from "./index.js";
-const code = `#fn(3, 4); / Required at the start of every file
-#ob(0, 5); / Not required but if its there it must be before any actions
-#ob(4, 4); / Creates a list of obstacles
-forward 5. / Since there is an obstacle at (0, 5) the robot can only move 5 spaces north
-turn right. / turn command
-forward 4.
-`
+const code = `@grid(10);
+#fn(-3, 4);
+forward 20.`
 
 const robot = parse(code)
-console.log(`ROBOT #874, moving towards (${robot[1].finishLine.join(', ')})`)
+console.log(`ROBOT #874, moving towards (${robot[2].finishLine.join(', ')})`)
 
 for(const state of interpret(...robot, true)) {
     // const [position, angle, finished, log] = state
